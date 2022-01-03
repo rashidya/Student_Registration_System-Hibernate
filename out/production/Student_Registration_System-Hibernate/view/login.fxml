@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="loginFormContext" minHeight="-Infinity" minWidth="-Infinity" prefHeight="674.0" prefWidth="1003.0" style="-fx-border-color: #006266; -fx-border-width: 10; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+   <children>
+      <Rectangle fill="#006266" height="674.0" layoutX="479.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="520.0" />
+      <Text fill="WHITE" layoutX="507.0" layoutY="104.0" lineSpacing="1.0" stroke="#c3c2c2" strokeType="OUTSIDE" strokeWidth="0.0" text="SIPSEWANA INSTITUE">
+         <font>
+            <Font name="Lucida Fax Demibold" size="41.0" />
+         </font>
+      </Text>
+      <ImageView fitHeight="296.0" fitWidth="305.0" layoutX="586.0" layoutY="189.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/cover.png" />
+         </image>
+      </ImageView>
+      <Text fill="WHITE" layoutX="502.0" layoutY="582.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-An Invesment in Knowledge Pays the Best Interest-">
+         <font>
+            <Font name="Lucida Fax Demibold" size="17.0" />
+         </font>
+      </Text>
+      <JFXButton alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="47.0" layoutY="88.0" onAction="#moveToRegistrationOnAction" prefHeight="156.0" prefWidth="397.0" style="-fx-background-color: #9a9a9a;" text="   Student Registration" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="68.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/student.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="47.0" layoutY="430.0" onAction="#moveToReportsOnAction" prefHeight="156.0" prefWidth="397.0" style="-fx-background-color: #9a9a9a;" text="                  Overview  " textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="59.0" fitWidth="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/statistics.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" focusTraversable="false" layoutX="47.0" layoutY="259.0" onAction="#moveToTrainingProgramOnAction" prefHeight="156.0" prefWidth="397.0" style="-fx-background-color: #9a9a9a;" text="   Training Programs  " textAlignment="JUSTIFY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="26.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="67.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/educationProgram.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

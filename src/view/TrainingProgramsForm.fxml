@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="trainingProgramsFormContext" prefHeight="613.0" prefWidth="968.0" style="-fx-background-color: #006266;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.TrainingProgramController">
+   <children>
+      <Rectangle fill="WHITE" height="481.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="968.0" />
+      <Text fill="WHITE" layoutX="597.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TRAINING PROGRAMS" wrappingWidth="344.578125">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Separator layoutX="109.0" layoutY="47.0" prefHeight="18.0" prefWidth="466.0" />
+      <JFXTextField fx:id="txtDuration" focusTraversable="false" labelFloat="true" layoutX="40.0" layoutY="208.0" prefHeight="37.0" prefWidth="289.0" promptText="Duration">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" focusTraversable="false" labelFloat="true" layoutX="349.0" layoutY="208.0" prefHeight="37.0" prefWidth="309.0" promptText="Fee(LKR)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnAddOrUpdate" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="814.0" layoutY="208.0" onAction="#addOrUpdateProgramOnAction" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: #04AA6D; -fx-background-radius: 5;" text="Add" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="30.0" layoutY="19.0" onAction="#homeOnAction" prefHeight="43.0" prefWidth="48.0" style="-fx-background-color: a8a8a8; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="30.0" fitWidth="35.0" layoutX="38.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-white-house-logo-png-5898244.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtProgram" focusTraversable="false" labelFloat="true" layoutX="352.0" layoutY="125.0" prefHeight="37.0" prefWidth="577.0" promptText="Program">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <TableView fx:id="tblPrograms" layoutX="40.0" layoutY="288.0" prefHeight="234.0" prefWidth="886.0" style="-fx-border-color: #c4c4c4; -fx-border-width: 5;">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="148.0" text="Program Id" />
+          <TableColumn fx:id="colProgram" prefWidth="463.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="141.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="133.0" text="Fee(LKR)" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtProgramId" focusTraversable="false" labelFloat="true" layoutX="40.0" layoutY="125.0" prefHeight="37.0" prefWidth="289.0" promptText="Program Id">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="687.0" layoutY="208.0" onAction="#cancelOnAction" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: #e55039; -fx-background-radius: 5;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>

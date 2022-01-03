@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="reportsFormContext" prefHeight="664.0" prefWidth="1013.0" style="-fx-background-color: #006266;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsFormController">
+   <children>
+      <Rectangle fill="WHITE" height="537.0" layoutY="89.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1013.0" />
+      <Text fill="WHITE" layoutX="807.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="OVERVIEW" wrappingWidth="175.578125">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <Separator layoutX="124.0" layoutY="49.0" prefHeight="18.0" prefWidth="666.0" />
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="37.0" layoutY="25.0" onAction="#homeOnAction" prefHeight="43.0" prefWidth="48.0" style="-fx-background-color: #a5b1c2; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="30.0" fitWidth="35.0" layoutX="45.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-white-house-logo-png-5898244.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tblStudent" focusTraversable="false" layoutX="38.0" layoutY="182.0" prefHeight="423.0" prefWidth="937.0" style="-fx-border-color: #c4c4c4; -fx-border-width: 5;">
+         <columns>
+            <TableColumn fx:id="colStId" prefWidth="99.0" text="Student ID" />
+            <TableColumn fx:id="colFullName" prefWidth="235.0" text="Full Name" />
+            <TableColumn fx:id="colAddress" prefWidth="192.0" text="Address" />
+            <TableColumn fx:id="colContact" prefWidth="140.0" text="Contact" />
+            <TableColumn fx:id="colNIC" prefWidth="134.0" text="NIC" />
+            <TableColumn fx:id="colOB" prefWidth="147.0" text="DOB" />
+         </columns>
+      </TableView>
+      <JFXComboBox fx:id="cmbSelect" layoutX="43.0" layoutY="121.0" prefHeight="31.0" prefWidth="287.0" promptText="SELECT" />
+      <Label fx:id="lblTotalStudents" alignment="CENTER" contentDisplay="CENTER" layoutX="907.0" layoutY="113.0" prefHeight="47.0" prefWidth="68.0" style="-fx-background-color: #636e72; -fx-background-radius: 10;" text="12" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="48.0" layoutX="848.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/user.png" />
+         </image>
+      </ImageView>
+      <AnchorPane fx:id="studentDetailContext" layoutY="84.0" prefHeight="543.0" prefWidth="1013.0" style="-fx-background-color: #ffffff;" visible="false">
+         <children>
+            <JFXTextField fx:id="txtContact" editable="false" labelFloat="true" layoutX="737.0" layoutY="189.0" prefHeight="31.0" prefWidth="213.0" promptText="Contact" />
+            <JFXTextField fx:id="txtFullName" editable="false" labelFloat="true" layoutX="268.0" layoutY="117.0" prefHeight="31.0" prefWidth="449.0" promptText="Full Name" />
+            <JFXTextField fx:id="txtStId" editable="false" labelFloat="true" layoutX="73.0" layoutY="117.0" promptText="ID" />
+            <JFXTextField fx:id="txtDOB" editable="false" labelFloat="true" layoutX="737.0" layoutY="117.0" prefHeight="31.0" prefWidth="213.0" promptText="DOB" />
+            <JFXTextField fx:id="txtAddress" editable="false" labelFloat="true" layoutX="73.0" layoutY="189.0" prefHeight="31.0" prefWidth="388.0" promptText="Address" />
+            <Separator layoutX="230.0" layoutY="256.0" prefHeight="18.0" prefWidth="720.0" />
+            <Label layoutX="64.0" layoutY="251.0" text="Program Details" textFill="#5b5b5b" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblPrograms" layoutX="64.0" layoutY="306.0" prefHeight="199.0" prefWidth="886.0" style="-fx-border-color: #c4c4c4; -fx-border-width: 5;">
+               <columns>
+                  <TableColumn fx:id="colProgramId" prefWidth="121.0" text="Program Id" />
+                  <TableColumn fx:id="colProgram" prefWidth="323.0" text="Program" />
+                  <TableColumn fx:id="colDuration" prefWidth="143.0" text="Duration" />
+                  <TableColumn fx:id="colFee" prefWidth="123.0" text="Fee" />
+                  <TableColumn fx:id="colRegistrationDate" prefWidth="175.0" text="Registration Date" />
+               </columns>
+            </TableView>
+            <Separator layoutX="230.0" layoutY="59.0" prefHeight="18.0" prefWidth="720.0" />
+            <Label layoutX="64.0" layoutY="54.0" text="Personal Details" textFill="#5b5b5b" underline="true">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnBack" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="903.0" layoutY="28.0" onAction="#BackOnAction" prefHeight="31.0" prefWidth="68.0" style="-fx-background-color: #636e72; -fx-background-radius: 5;" text="Back" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtNIC" editable="false" labelFloat="true" layoutX="472.0" layoutY="189.0" prefHeight="31.0" prefWidth="246.0" promptText="NIC" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

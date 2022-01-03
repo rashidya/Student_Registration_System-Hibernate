@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registrationFormContext" prefHeight="762.0" prefWidth="1203.0" style="-fx-background-color: #006266;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.StudentRegistrationFormController">
+   <children>
+      <Rectangle fill="WHITE" height="636.0" layoutX="-7.0" layoutY="86.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1212.0" />
+      <Text fill="WHITE" layoutX="797.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="STUDENT REGISTRATION" wrappingWidth="383.578125">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Text>
+      <JFXButton alignment="CENTER" contentDisplay="CENTER" layoutX="1133.0" layoutY="199.0" onAction="#addProgramOnAction" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #636e72; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXTextField fx:id="txtFullName" labelFloat="true" layoutX="43.0" layoutY="270.0" prefHeight="37.0" prefWidth="557.0" promptText="Full Name" unFocusColor="#575757" />
+      <JFXTextField fx:id="txtContactNo" labelFloat="true" layoutX="47.0" layoutY="443.0" prefHeight="37.0" prefWidth="557.0" promptText="Contact No." />
+      <Label layoutX="47.0" layoutY="619.0" text="DOB">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtAddress" labelFloat="true" layoutX="47.0" layoutY="533.0" prefHeight="37.0" prefWidth="557.0" promptText="Address" />
+      <JFXComboBox fx:id="cmbTrainingProgram" labelFloat="true" layoutX="697.0" layoutY="196.0" prefHeight="31.0" prefWidth="417.0" promptText="Training Program" />
+      <JFXComboBox fx:id="cmbDay" labelFloat="true" layoutX="152.0" layoutY="616.0" prefHeight="31.0" prefWidth="73.0" promptText="DD" />
+      <JFXComboBox fx:id="cmbMonth" labelFloat="true" layoutX="269.0" layoutY="616.0" prefHeight="31.0" prefWidth="73.0" promptText="MM" />
+      <JFXComboBox fx:id="cmbYear" labelFloat="true" layoutX="371.0" layoutY="616.0" prefHeight="31.0" prefWidth="104.0" promptText="YYYY" />
+      <TextField fx:id="txtSearchID" layoutX="38.0" layoutY="118.0" prefHeight="31.0" prefWidth="181.0" promptText="ID" />
+      <TextField fx:id="txtSearchName" layoutX="219.0" layoutY="118.0" prefHeight="31.0" prefWidth="350.0" promptText="Name" />
+      <Label layoutX="39.0" layoutY="177.0" text="Personal Information " textFill="#5b5b5b" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="698.0" layoutY="118.0" text="Program Details" textFill="#5b5b5b" underline="true">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDuration" editable="false" labelFloat="true" layoutX="699.0" layoutY="269.0" prefHeight="37.0" prefWidth="205.0" promptText="Duration">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXTextField fx:id="txtFee" editable="false" labelFloat="true" layoutX="934.0" layoutY="269.0" prefHeight="37.0" prefWidth="232.0" promptText="Fee(LKR)">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton fx:id="btnRegister" alignment="CENTER" contentDisplay="CENTER" disable="true" layoutX="1054.0" layoutY="647.0" onAction="#registerStudentOnAction" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: #04AA6D; -fx-background-radius: 5;" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="btnCancel" alignment="CENTER" contentDisplay="CENTER" layoutX="931.0" layoutY="647.0" onAction="#cancelOnAction" prefHeight="39.0" prefWidth="115.0" style="-fx-background-color: #e55039; -fx-background-radius: 5;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="23.0" layoutY="25.0" onAction="#homeOnAction" prefHeight="43.0" prefWidth="48.0" style="-fx-background-color: #a8a8a8; -fx-background-radius: 5;" textFill="WHITE">
+         <font>
+            <Font size="1.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <ImageView disable="true" fitHeight="30.0" fitWidth="35.0" layoutX="31.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-white-house-logo-png-5898244.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtNIC" labelFloat="true" layoutX="45.0" layoutY="363.0" prefHeight="37.0" prefWidth="557.0" promptText="NIC" />
+      <Separator layoutX="645.0" layoutY="114.0" orientation="VERTICAL" prefHeight="587.0" prefWidth="0.0" />
+      <TableView fx:id="tblPrograms" layoutX="697.0" layoutY="357.0" prefHeight="250.0" prefWidth="475.0" style="-fx-border-color: #c4c4c4; -fx-border-width: 5;">
+        <columns>
+          <TableColumn fx:id="colProgramId" prefWidth="96.0" text="Program Id" />
+          <TableColumn fx:id="colProgram" prefWidth="174.0" text="Program" />
+            <TableColumn fx:id="colDuration" prefWidth="101.0" text="Duration" />
+            <TableColumn fx:id="colFee" prefWidth="103.0" text="Fee" />
+        </columns>
+      </TableView>
+      <ImageView disable="true" fitHeight="31.0" fitWidth="18.0" layoutX="1141.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/Daco_4535933.png" />
+         </image>
+      </ImageView>
+      <JFXListView fx:id="listSearchID" focusTraversable="false" layoutX="38.0" layoutY="153.0" prefHeight="123.0" prefWidth="181.0" visible="false" />
+      <Separator layoutX="98.0" layoutY="50.0" prefHeight="18.0" prefWidth="684.0" />
+      <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#636e72" height="30.0" layoutX="576.0" layoutY="119.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
+      <ImageView disable="true" fitHeight="30.0" fitWidth="18.0" layoutX="582.0" layoutY="125.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/pngfind.com-search-logo-png-6694830.png" />
+         </image>
+      </ImageView>
+      <JFXListView fx:id="listSearchName" focusTraversable="false" layoutX="220.0" layoutY="153.0" prefHeight="123.0" prefWidth="350.0" visible="false" />
+      <Label fx:id="lblSt_Id" alignment="CENTER_RIGHT" layoutX="434.0" layoutY="201.0" prefHeight="30.0" prefWidth="166.0" text="Label">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Label>
+      <Label layoutX="407.0" layoutY="205.0" text="ID :">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
